@@ -24,7 +24,7 @@
 
 1) Command line
 ```
-git clone 
+git clone https://github.com/willdonejw/spring-fileupload-thymeleaf.git
 ```
 2) IntelliJ
 ```
