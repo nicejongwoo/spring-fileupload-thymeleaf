@@ -1,5 +1,6 @@
 package com.example.fileupload.service;
 
+import com.example.fileupload.common.exception.InvalidFileExtensionException;
 import com.example.fileupload.entity.FileEntity;
 import com.example.fileupload.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,18 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public String uploadFile(String originalFileName, MultipartFile file) throws IOException {
+
+        //파일 확장자 체크
+        String extension = file.getOriginalFilename()
+                .substring(file.getOriginalFilename().lastIndexOf(".") + 1).toLowerCase();
+
+        if (extension != null) {
+            log.debug("extension: {}", extension);
+            if (extension.equals("exe")) {
+                throw new InvalidFileExtensionException();
+            }
+        }
+
         byte[] fileData = file.getBytes();
 
         //유일 ID 생성
