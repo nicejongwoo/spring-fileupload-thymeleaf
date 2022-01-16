@@ -38,6 +38,7 @@ SpringFileuploadThymeleafApplication.java.main() 실행 - (단축키: alt + f10)
 4) Connection
 ```
 http://localhost:8080/
+http://localhost:8080/h2-console
 ```
 
 ### Build
