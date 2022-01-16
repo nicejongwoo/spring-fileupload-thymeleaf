@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @Slf4j
 @RequestMapping("/upload")
-public class fileUploadController {
+public class FileUploadController {
 
     @PostMapping
     public void upload(@RequestParam("file") MultipartFile file) {

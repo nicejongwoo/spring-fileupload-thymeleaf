@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>file_upload_dropzone</title>
+</head>
+<body>
+
+	<div th:fragment="file_upload_dropzone" id="dropzone">
+		<form action="/upload" class="dropzone needsclick" id="demo-upload">
+
+			<div class="dz-message needsclick">
+				<button type="button" class="dz-button">Drop files here or click to upload.</button>
+				<br/>
+			</div>
+
+		</form>
+
+		<script th:inline="javascript">
+			$(function () {
+			    Dropzone.autoDiscover = false;
+
+			    $("#demo-upload").dropzone({
+			        success : function(file, response) {
+			            toastr.success('File ' + file.name + ' uploaded successfully');
+			        }
+			    });
+		    })
+		</script>
+
+	</div>
+
+
+</body>
+</html>

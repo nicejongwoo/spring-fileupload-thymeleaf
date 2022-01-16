@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://thymeleaf.org"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/main_template}">
 <head>
 	<meta charset="UTF-8">
-	<title>Index</title>
+	<title>InsertOrUpdate</title>
 </head>
 <body>
 
-	<div layout:fragment="content" align="center">
+	<div layout:fragment="content">
 
-		<h2>Index</h2>
+		<h2>Board Insert</h2>
+
+		<div th:replace="fragments/file_upload_dropzone::file_upload_dropzone"></div>
 
 	</div>
 
