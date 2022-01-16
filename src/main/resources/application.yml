@@ -32,3 +32,9 @@ logging:
         type:
           descriptor:
             sql: trace
+    com:
+      example:
+        fileupload: DEBUG
+
+upload:
+  directory: target/upload
